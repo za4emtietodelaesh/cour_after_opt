@@ -19,6 +19,7 @@ int two = 0;
 int NEW[100][100] = { 0 };
 //
 //
+/// 
 
 void qs(char* temp1, int* s_arr, int first, int last)
 {
