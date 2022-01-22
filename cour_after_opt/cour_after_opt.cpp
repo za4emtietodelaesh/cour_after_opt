@@ -10,7 +10,8 @@
 #include<stdint.h>
 //TODO:
 //-
-//
+// 
+//Объявление переменных
 char dict[100000][20] = { "\0" ,"\0" }; 
 char dictNew[100000][20] = { "\0" ,"\0" };
 int sizes[100000];
@@ -19,6 +20,7 @@ int two = 0;
 int NEW[100][100] = { 0 };
 //
 //
+
 
 void qs(char* temp1, int* s_arr, int first, int last)
 {
@@ -408,12 +410,12 @@ void encodedS(char coders[]) { //декодирование после втор�
     remove("C:\\Users\\f7kso\\Desktop\\amount.txt");
 }
 
-void coder(char text[], int* size) {
+void coder(char text[], int* size) { //функция кодировани двумя алгоритмами: фано и Lz
     coding(text, size);
     codingS();
 }
 
-void encoder(char code[]) {
+void encoder(char code[]) { //функция декодирования в обратном порядке
     encodedS(code);
     encoded();
 }
