@@ -49,6 +49,15 @@ void qs(char* temp1, int* s_arr, int first, int last)
     }
 } //оптимизация путем смены "пузырьковой" сортировки на "быструю"
 
+
+/// <summary>
+/// вспомогательная функция для кодирования фано 
+/// </summary>
+/// <param name="codes">массив символов, используемый для кодирования Фано</param>
+/// <param name="c">индекс смещения символов</param>
+/// <param name="byte">размер символа</param>
+/// <param name="bytecode">размер символа разпределенный в массив </param>
+/// <param name="sizeofcode">размер файла в коде</param>
 void Mcode(int* codes, int c, int byte, int* bytecode, int sizeofcode) {
     if (c > -1)
         bytecode[c] = byte;
