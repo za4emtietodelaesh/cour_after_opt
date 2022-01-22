@@ -12,7 +12,7 @@
 //-
 // 
 //Объявление переменных
-char dict[100000][20] = { "\0" ,"\0" }; 
+char dict[100000][20] = { "\0" ,"\0" }; //переменная dict и dictNew нужны для реализации словаря в алгоритме LZ
 char dictNew[100000][20] = { "\0" ,"\0" };
 int sizes[100000];
 int counters[100000];
@@ -99,7 +99,7 @@ void Mcode(int* codes, int c, int byte, int* bytecode, int sizeofcode) {
     Mcode(temp, c, 1, bytecode, (sizeofcode - i));
 }
 
-void coding(char PATH[500], int* SIZE)
+void coding(char PATH[500], int* SIZE) //первичное кодирование алгоритмом Фано
 {
     two = 0;
     FILE* open = fopen(PATH, "r");
@@ -160,7 +160,7 @@ void coding(char PATH[500], int* SIZE)
     fclose(open);
 }
 
-void encoded() {
+void encoded() { //реализованный алгоритм декодирования Фано
     FILE* open = fopen("C:\\Users\\f7kso\\Desktop\\Encoded.txt", "r");
     FILE* out = fopen("C:\\Users\\f7kso\\Desktop\\EncodedF.txt", "w");
     FILE* key = fopen("C:\\Users\\f7kso\\Desktop\\key.txt", "r");
@@ -212,7 +212,7 @@ void encoded() {
     //printf("END");
 }
 
-void codingS()
+void codingS() //вторичное кодирование алгоритмом LZ
 {
     FILE* open = fopen("C:\\Users\\f7kso\\Desktop\\codedF.txt", "r");
     FILE* amount_of_num = fopen("C:\\Users\\f7kso\\Desktop\\amount.txt", "w+");
@@ -430,7 +430,7 @@ void encoder(char code[]) { //функция декодирования в об�
     encoded();
 }
 
-int main() {
+int main() { //основное тело программмы
     int i = 0;
     int size = 0;
     while (i != 3) {
